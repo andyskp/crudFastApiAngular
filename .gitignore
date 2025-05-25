@@ -1,0 +1,41 @@
+# Python cache y archivos temporales
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+ENV/
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Archivos de base de datos SQLite (si usaras alguna local)
+*.sqlite3
+
+# Archivos pycache de pytest
+.cache/
+
+# Archivos de migraciones (si usaras Alembic o similar)
+migrations/
+
+# Archivos de build o dist (si tuvieras paquetes)
+build/
+dist/
+
+# Configuración de frontend (node_modules, dist, build)
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
