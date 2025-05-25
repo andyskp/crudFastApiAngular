@@ -3,7 +3,18 @@ from backend.app import schemas, models, auth, data
 from backend.app.default_data import default_tasks
 
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4200"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Cargar tareas por defecto
 
