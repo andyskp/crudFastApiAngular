@@ -29,10 +29,5 @@ migrations/
 build/
 dist/
 
-
-
-# Mac OS
-.DS_Store
-
 # Windows
 Thumbs.db

@@ -1,9 +1,11 @@
 from fastapi import FastAPI, HTTPException, Depends, Header
 from backend.app import schemas, models, auth, data
-
+from backend.app.default_data import default_tasks
 
 
 app = FastAPI()
+
+# Cargar tareas por defecto
 
 # Registro de usuarios
 @app.post("/register")
@@ -63,3 +65,10 @@ def delete_task(task_id: int, user: str = Depends(get_current_user)):
             data.tasks_db.remove(t)
             return {"msg": "Task deleted"}
     raise HTTPException(status_code=404, detail="Task not found")
+
+@app.get("/dashboard")
+def show_dashboard(current_user: str = Depends(get_current_user)):
+    return {
+        "usuario": current_user.username,
+        "tareas":default_tasks
+    }
