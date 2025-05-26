@@ -1,0 +1,65 @@
+/* Estilos del contenedor */
+.login-container {
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Título */
+.login-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333333;
+}
+
+/* Etiquetas */
+.login-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #555555;
+  font-weight: 500;
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+/* Botón */
+.login-button {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #004a99;
+}
+
+/* Mensaje de error */
+.login-error {
+  color: #d9534f;
+  text-align: center;
+  margin-top: 1rem;
+}

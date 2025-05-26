@@ -45,6 +45,7 @@ def get_current_user(authorization: str = Header(...)):
         raise HTTPException(status_code=403, detail="Invalid token")
     return username
 
+
 # Crear tarea
 @app.post("/tasks", response_model=schemas.Task)
 def create_task(task: schemas.TaskCreate, user: str = Depends(get_current_user)):
