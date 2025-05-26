@@ -12,7 +12,8 @@ export interface Task {
   providedIn: 'root'
 })
 export class TodoService {
-  private apiUrl = 'http://127.0.0.1:8000'; // Cambia si es necesario
+  // URL local 
+  private apiUrl = 'http://127.0.0.1:8000'; 
 
   constructor(private http: HttpClient) {}
 
@@ -24,7 +25,7 @@ private getHeaders(): HttpHeaders {
   });
 }
 
-
+  // Peticiones HTTP para las tareas
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(`${this.apiUrl}/tasks`, { headers: this.getHeaders() });
   }
